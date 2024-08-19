@@ -1,0 +1,189 @@
+version: "3.1"
+
+intents:
+- greet
+- guest_name
+- goodbye
+- stop_conversation
+- affirmative
+- negative
+- request_painting
+- request_person
+- request_movement
+- request_collection
+- request_material
+- request_genre
+- request_exhibition
+- request_country
+- request_city
+- request_date
+- request_keyword
+- request_topic
+- request_next_painting
+- request_both
+- request_none
+- request_either
+- shows_interest_pos
+- shows_interest_neg
+- request_more_info
+- request_what_else
+
+
+actions:
+  - action_new_guest
+  - action_next_painting
+  - action_request_aspect
+  - action_request_topic
+  - action_store_interest
+  - action_bot_turn
+  - action_more_info
+  - action_what_else
+
+  - action_random_interested_attributes
+  - action_random_2_choice
+  - action_request_both
+  - action_choose_none
+  - action_register_interest
+
+  - utter_greet
+  - utter_goodbye
+  - utter_attribute_or_painting
+
+responses:
+  utter_greet:
+    - text: "Hello! Welcome to the virtual version of Rembrandt House Museum! My name is COBY, what is your name?"
+
+  utter_goodbye:
+  - text: "I hope you enjoyed the museum tour, Bye!"
+
+  utter_attribute_or_painting:
+  - text: "You can either ask questions about the painting or proceed to the next one."
+
+  utter_second_greet:
+    - text: " Nice to meet you, {name}, I am your virtual guide. You will visit the exhibition, The Blacks in Rembrandt's Time. Shall we begin?"
+  
+  utter_painting_one_description:
+    - text: "Great, you can ask me anything about the paintings.\nYou can also request to go to the next painting or stop the conversation any time.\nThis is the first painting in the Museum. It is called {current_painting}."
+  utter_paintings_description:
+    - text: "This painting is called {current_painting}."
+    - text: "This next painting is named {current_painting}."
+    - text: "Okay, now you can see the painting known as {current_painting}."
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+
+entities:
+- Paintings
+- Person
+- Movement
+- Material
+- Keyword
+- Genre
+- Exhibition
+- Country
+- Collection
+- City
+- aspect
+- guest_name
+
+slots:
+  current_painting:
+    type: text
+    mappings:
+      - type: custom
+
+  # latest_aspect:
+  #   type: text
+  #   mapping:
+  #     - type: custom
+
+  painting_number:
+    type: float
+    mappings:
+      - type: custom
+        initial_value: 0
+
+  aspect:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: aspect
+  Person:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Person
+  Movement:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Movement
+  Material:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Material
+  Keyword:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Keyword
+  Genre:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Genre
+  Exhibition:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Exhibition
+  Country:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Country
+  Collection:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: Collection
+  City:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: City
+
+  intent1:
+    type: text
+    mappings:
+      - type: custom
+
+  intent2:
+    type: text
+    mappings:
+      - type: custom
+  
+  # Name:
+  #   type: text
+  #   influence_conversation: false
+  #   mappings:
+  #     - type: from_entity
+  #       entity: guest_name

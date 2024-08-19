@@ -1,0 +1,14 @@
+# IDE specific files
+.idea/
+
+# Rasa related directory
+.rasa/
+
+# Python cache files
+__pycache__/
+
+# Model directories
+models/
+
+# Compressed files
+*.zip

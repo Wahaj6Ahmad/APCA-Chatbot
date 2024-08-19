@@ -1,0 +1,584 @@
+version: "3.1"
+
+nlu:
+
+- intent: guest_name
+  examples: |
+    - my name is [Wahaj](guest_name)
+    - [Meenakshi](guest_name)
+    - you can refer to me as [Ahmad](guest_name)
+    - I go by the name [Nanda](guest_name)
+    - you can call me [Suzie](guest_name)
+    - my name is [Delaram](guest_name)
+    - i like to be called [Sheghui](guest_name)
+    - [Carlotta](guest_name)
+    - [Carlo](guest_name)
+    - [Phoebe](guest_name)
+    - [Rick](guest_name)
+    - [Ellie](guest_name)
+
+- intent: request_what_else
+  examples: |
+    - what can i ask about this painting
+    - what else can i know
+    - what are somethings you can tell me about this painting
+    - is there anything i can know 
+    - what else
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - see you around
+    - bye bye
+    - see you later
+    
+- intent: affirmative
+  examples: |
+    - yes
+    - yeah
+    - yo
+    - yup
+    - yep
+    - sure
+    - ahan
+    - lets go
+    - yes please
+    - you may
+    - let's do it
+    - start
+    - go
+    - continue
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: negative
+  examples: |
+    - no
+    - nope
+    - nah
+    - not at all
+    - i am not ready
+    - not right now
+    - lets not do this
+    - I don't think so
+    - no way
+    - not really
+    
+- intent: shows_interest_pos
+  examples: |
+    - that's very interesting
+    - Wow
+    - I love that!
+    - No way! That's incredible!
+    - Oh, really? 
+    - Wow, I had no idea!
+    - That's fascinating! 
+    - That's pretty cool. 
+    - I'm intrigued! 
+    - That's amazing!
+    - Really? That's quite impressive!
+    - Oh, that's interesting. 
+    - I'm hooked! 
+    - No kidding! 
+    - Whoa! That's mind-blowing.
+    - That's intriguing! 
+    - That's really neat. 
+    - You've got my attention. 
+    - Oh, that's so cool!
+    - No way! That's seriously interesting.
+    - That's impressive. 
+    - That's captivating
+    - Interesting
+
+- intent: shows_interest_neg
+  examples: |
+    - I don't want to know about this
+    - I don't like this
+    - I'm not interested in this
+    - No, I'm not interested
+    - Sorry, not interested
+    - I have no interest in that
+    - Not really interested
+    - I'm not keen on that
+    - Not my cup of tea
+    - I'd rather not learn about that
+    - I don't care about it
+    - That doesn't interest me
+    - i don't quite like that
+
+- intent: stop_conversation
+  examples: |
+    - stop the conversation
+    - stop the tour
+    - i want to exit this tour
+    - close this 
+    - quit
+    - exit
+    - finish
+
+- intent: request_painting
+  examples: |
+    - tell me about this painting
+    - Tell me more!
+    - Please share the details.
+    - I would like to know about this painting
+    - what do you know about this painting
+    - what is in this painting
+    - who is in this painting
+    - what this painting show
+    - what this is show
+    - what its show
+    - tell me more about this painting
+    - what is it about
+    - what is the painting about
+    - describe this painting
+    - description of this painting
+    - its description 
+    - What is the description of [The Night Watch](Paintings)?
+    - What is the description of [A boy in fanciful costume](Paintings) painting?
+    - What is the description of [King Caspar](Paintings)?
+    - describe [The Night Watch](Paintings)
+    - describe [King Caspar](Paintings)
+    - describe [A boy in fanciful costume](Paintings) painting
+
+- intent: request_genre
+  examples: |
+    - What is the genre of [The Night Watch](Paintings)?
+    - What is the genre of [A boy in fanciful costume](Paintings) painting?
+    - What is the style of [King Caspar] (Paintings)?
+    - What is the style of [Head of a Boy in a Turban](Paintings) painting?
+    - What is the category of [Man in a Turban](Paintings) painting?
+    - What is the category of [Half-figure of a Bearded Man with Beret](Paintings)?
+    - What is the category?
+    - What is its style?
+    - What is the genre?
+    - category?
+    - category of this painting?
+    - category of it?
+    - its category?
+    - genre
+    - style
+    - category
+    - tell me about its genre
+
+- intent: request_material
+  examples: |
+    - What is the material of [The Night Watch](Paintings)?
+    - What is the material of [King Caspar](Paintings)?
+    - What is the material of [The Night Watch](Paintings)?
+    - What is the textile of [King Caspar](Paintings)?
+    - What is the textile?
+    - What is its material?
+    - material?
+    - material of this painting?
+    - material of it?
+    - its material?
+    - tell me about its material
+
+- intent: request_exhibition
+  examples: |
+    - Which exhibition is [The Night Watch](Paintings) in?
+    - Which exhibition is [King Caspar](Paintings) in?
+    - Which exhibition is [Half-figure of a Bearded Man with Beret](Paintings) in?
+    - Which exhibition is [Man in a Turban](Paintings) in?
+    - Which exhibition?
+    - exhibition of this painting
+    - exhibition    
+    - tell me about its exhibition
+
+- intent: request_country
+  examples: |
+    - Which country is [The Night Watch](Paintings) in?
+    - Which country is [King Caspar](Paintings) in?
+    - Which nationality is [Half-figure of a Bearded Man with Beret](Paintings) in?
+    - Which nationality is [Man in a Turban](Paintings) in?
+    - Which country?
+    - Which nationality?
+    - nationality of this painting
+    - nationality
+    - its nationality
+    - country
+    - nationality
+    - tell me about its country
+
+- intent: request_city
+  examples: |
+    - Which city is [The Night Watch](Paintings) in?
+    - Which city is [King Caspar](Paintings) in?
+    - its city
+    - city
+    - tell me about its city
+
+- intent: request_date
+  examples: |
+    - When was [Man in a Turban](Paintings)?
+    - Date of [The Night Watch](Paintings)?
+    - When was it?
+    - When?
+    - Date
+    - Date of this painting
+    - its date
+
+- intent: request_collection
+  examples: |
+    - Which museum owns [The Night Watch](Paintings)?
+    - Which museum owns [Head of a Boy in a Turban](Paintings)?
+    - Which collection owns [King Caspar](Paintings)?
+    - Which collection owns [Portrait of an Old Man in Red by Rembrandt](Paintings)?
+    - Which gallery owns [King Caspar](Paintings)?
+    - Which gallery owns [Portrait of an Old Man in Red by Rembrandt](Paintings)?
+    - which gallery?
+    - gallery
+    - museum
+    - collection? 
+    - collection of this painting? 
+    - collection of it? 
+    - its collection? 
+    - tell me about its collection
+    - tell me about its museum
+    - tell me about its gallery
+    - its collection
+
+- intent: request_movement
+  examples: |
+    - What movement does [Man in a Turban](Paintings) belongs to?
+    - What movement does [King Caspar](Paintings) belongs to?
+    - What movement does [The Night Watch](Paintings) belongs to?
+    - What movement does it belongs to?
+    - What movement?
+    - movement
+
+- intent: request_person
+  examples: |
+    - who is the creator of [King Caspar](Paintings)?
+    - who is the creator of [Portrait of a Black Woman](Paintings)?
+    - who is creator of [Head of a Boy in a Turban](Paintings)?
+    - who is creator of [The Market in Dam Square](Paintings)?
+    - tell me about the creator of [King Caspar](Paintings)
+    - tell me about creator of [Portrait of a Black Woman](Paintings)
+    - tell me about creator of [Head of a Boy in a Turban](Paintings)?
+    - tell me about creator of [The Market in Dam Square](Paintings)?
+    - tell me about who create [Portrait of a Black Woman](Paintings)
+    - tell me about who create [Head of a Boy in a Turban](Paintings)?
+    - tell me about who create [The Market in Dam Square](Paintings)?
+    - who create this painting?
+    - tell me about its creator
+    - tell me who painted this painting
+    - creator of it?
+    - who create it?
+    - who painted it?
+    - who is the painter of this painting?
+    - who painted this painting?
+
+- intent: request_topic
+  examples: |
+    - I would like to know about [King Caspar](Paintings) painting
+    - could you please tell me about [Portrait of a Black Woman](Paintings) painting
+    - what can you tell me about [Head of a Boy in a Turban](Paintings) painting
+    - I would like to know about [The Market in Dam Square](Paintings) 
+    - could you please tell me about [Portrait of an Old Man in Red by Rembrandt](Paintings) 
+    - what can you tell me about [Half-figure of a Bearded Man with Beret](Paintings) 
+    - Could you tell me about the [Hendrik Heerschop](Person)?
+    - Could you tell me about [Gerrit Dou](Person)?
+    - I want to know more about [Jaspar Beckx](Person)
+    - I want to know more about [Rembrandt](Person)
+    - tell me about [Rembrandt](Person)
+    - tell me about [Amsterdam Museum](Collection)
+    - tell me about [The Hyde Collection](Collection)
+    - tell me about [Detroit Institute of Arts](Collection)
+    - tell me about [Joslyn Art Museum](Collection)
+    - tell me about [Rijksmuseum](Collection)
+    - tell me about [copper sheet](Material)
+    - tell me about [oil paint](Material)
+    - tell me about [poplar panel](Material)
+    - tell me about [oak](Material)
+    - tell me about [baroque painting](Movement)
+    - tell me about [Baroque](Movement)
+    - tell me about [Dutch Golden Age painting](Movement)
+    - tell me about [Orientalism](Movement)
+    - tell me about [portrait](Genre)
+    - tell me about [religious art](Genre)
+    - tell me about [landscape art](Genre)
+    - tell me about [history painting](Genre)
+    - tell me about [United Arab Emirates](Country)
+    - tell me about [Australia](Country)
+    - tell me about [Netherlands](Country)
+    - tell me about [Nuremberg](City)
+    - tell me about [Pasadena](City)
+    - tell me about [Amsterdam](City)
+    - tell me about [National Trust - Dutch Masters from British Country Houses](Exhibition)
+    - tell me about [Bodies and Shadows: Caravaggio and his European followers](Exhibition)
+    - tell me about [Late Rembrandt](Exhibition)
+    - tell me about [rest on the flight into Egypt](Keyword)
+    - tell me about [Saint Caspar](Keyword)
+    - tell me about [chimney](Keyword)
+
+- intent: request_keyword
+  examples: |
+    - What is the key element in [The Night Watch](Paintings)?
+    - What is the key element in [Man in a Turban](Paintings) painting?
+    - What is the Depicts in [Man in a Turban](Paintings) painting?
+    - What is the Depicts in [King Caspar](Paintings) painting?
+    - What is the object in [Man in a Turban](Paintings) painting?
+    - What is the keyword in [King Caspar](Paintings) painting?
+    - What is the keyword?
+    - What is its Depicts?
+    - keyword
+    - keyword of this painting
+    - its keyword
+    - element
+    - object
+    - depict
+    - keyword
+    - depicts
+    - tell me about its keyword
+    - tell me about its object
+    - tell me about its depict
+
+- intent: request_next_painting
+  examples: |
+    - Next
+    - Next painting
+    - can i see the next painting
+    - go to the next painting
+    - lets move to the next painting
+
+- intent: request_both
+  examples: |
+    - tell me about both of these option
+    - can you tell me about all of them
+    - both are interesting to me
+    - i choose option one and two
+    - how about both of them
+    - both
+    - all
+    - want to know both
+    - both are interesting
+    - tell me two
+    - tell me both
+
+- intent: request_none
+  examples: |
+    - none
+    - both are not interesting
+    - not really interesting
+    - not into these
+    - can i learn something else
+    - not these two
+    - something else
+    - i dont like either of them
+
+- intent: request_either
+  examples: |
+    - tell me about the first option
+    - tell me about the second option
+    - the first one
+    - i want to know about the second choice
+    - the second one
+
+- intent: request_more_info
+  examples: |
+    - tell me more about this 
+    - yes i want to know more
+    - more
+    - give me details
+    - the details yes
+    
+#LOOK UP TABLES START HERE
+
+- lookup: Paintings
+  examples: |
+    - King Caspar
+    - The Night Watch
+    - A boy in fanciful costume
+    - Half-figure of a Bearded Man with Beret
+    - Head of a Boy in a Turban
+    - Diego Bemba, a Servant of Don Miguel de Castro
+
+- lookup: Person
+  examples: |
+    - Hendrik Heerschop
+    - Gerrit Dou
+    - Rembrandt
+    - Jacob van der Ulft
+    - Leendert van der Cooghen
+    - Hedy Tjin
+
+- lookup: Movement
+  examples: |
+    - Baroque painting
+    - Baroque
+    - Dutch Golden Age painting
+    - Orientalism
+    - Realism
+    - neo-impressionism
+
+- lookup: Material
+  examples: |
+    - canvas
+    - gold
+    - copper sheet
+    - oak panel
+    - wood
+    - poplar panel
+
+- lookup: Keyword
+  examples: |
+    - Saint Bavo
+    - Saint Caspar
+    - Orientalist painting
+    - tusk
+    - homer
+    - Pilate washing his hands
+
+- lookup: Genre
+  examples: |
+    - portrait
+    - religious art
+    - landscape art
+    - history painting
+    - schutterstuk
+    - allegory
+    - mythological painting
+
+- lookup: Exhibition
+  examples: |
+    - National Trust - Dutch Masters from British Country Houses
+    - Bodies and Shadows: Caravaggio and his European followers
+    - Late Rembrandt
+    - Museum of Fine Arts
+    - National Gallery
+    - Hundred Masterpieces in Parisian Collections 1883
+    - Rembrandt House Museum
+
+- lookup: Country
+  examples: |
+    - United Arab Emirates
+    - Australia
+    - Argentina
+    - Czech Republic
+    - Russian Empire
+    - Romania
+
+- lookup: Collection
+  examples: |
+    - Koninklijke Bibliotheek
+    - Amsterdam Museum
+    - The Hyde Collection
+    - Detroit Institute of Arts
+    - Joslyn Art Museum
+    - Artizon Museum
+    - Royal Castle
+
+- lookup: City
+  examples: |
+    - Nuremberg
+    - Pasadena
+    - Leipzig
+    - London Borough of Southwark
+    - Dulwich
+    - Bucharest
+    
+    
+    
+
+- lookup: aspect
+  examples: |
+    - Date
+    - Person
+    - Material
+    - Collection
+    - Country
+    - Genre
+    - Keyword
+    - Exhibition
+    - Movement
+    - City
+    - Paintings
+
+#SYNONYMS START HERE
+
+- synonym: Date
+  examples: |
+    - when
+    - date
+
+- synonym: Paintings
+  examples: |
+    - paintings
+    - painting
+
+- synonym: Person
+  examples: |
+    - creator
+    - create
+
+- synonym: Material
+  examples: |
+    - material
+    - textile
+
+- synonym: Collection
+  examples: |
+    - collection
+    - museum
+    - gallery
+
+- synonym: Country
+  examples: |
+    - country
+    - which country
+    - nationality
+
+- synonym: Genre
+  examples: |
+    - genre
+    - style
+    - category
+
+- synonym: Keyword
+  examples: |
+    - element
+    - object
+    - depict
+    - keyword
+    - depicts
+
+- synonym: Exhibition
+  examples: |
+    - exhibition
+
+- synonym: Movement
+  examples: |
+    - movement
+
+- synonym: City
+  examples: |
+    - city
+    - which city
+
+  
+
+

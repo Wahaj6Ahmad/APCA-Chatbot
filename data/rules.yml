@@ -1,0 +1,20 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye or stop
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_restart
+
+- rule: Say goodbye anytime the user says stop
+  steps:
+  - intent: stop_conversation
+  - action: utter_goodbye
+  - action: action_restart
+
+- rule: Move on to the next painting when user requests
+  steps:
+  - intent: request_next_painting
+  - action: action_next_painting

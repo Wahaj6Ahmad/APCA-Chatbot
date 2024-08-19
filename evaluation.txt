@@ -1,0 +1,1 @@
+Bot loaded. Type a message and press enter (use '/stop' to exit): 

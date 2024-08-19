@@ -1,0 +1,108 @@
+version: "3.1"
+
+stories:
+
+- story: HAPPY STORY - 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: guest_name
+  - action: action_new_guest
+  - or:
+      - intent: affirmative
+      - intent: negative
+  - action: action_next_painting
+
+- story: what else can i ask
+  steps:
+  - intent: request_what_else
+  - action: action_what_else
+
+- story: next painting
+  steps:
+  - intent: request_next_painting
+  - action: action_next_painting
+
+- story: guest shows interest
+  steps:
+  - or:
+      - intent: shows_interest_pos
+      - intent: shows_interest_neg
+  - action: action_store_interest
+  
+- story: request aspect
+  steps:
+    - or:
+        - intent: request_person
+        - intent: request_painting
+        - intent: request_movement
+        - intent: request_collection
+        - intent: request_material
+        - intent: request_keyword
+        - intent: request_genre
+        - intent: request_exhibition
+        - intent: request_country
+        - intent: request_city
+        - intent: request_date
+    - action: action_request_aspect
+    - action: action_bot_turn
+    - intent: request_more_info
+    # - or:
+    #     - intent: affirmative
+    #     - intent: negative
+    - action: action_more_info
+    - action: action_bot_turn
+
+
+- story: request topic
+  steps:
+    - intent: request_topic
+    - action: action_request_topic
+
+
+# - story: 2_choices_choose_none
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: action_next_painting
+#   - action: action_request_description
+#   - action: action_random_2_choice
+#   - intent: choose_none
+#   - action: utter_attribute_or_painting
+
+# - story: 2_choices_choose_one
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: action_next_painting
+#   - action: action_request_description
+#   - action: action_random_2_choice
+#   - or:
+#         - intent: request_person
+#         - intent: request_painting
+#         - intent: request_movement
+#         - intent: request_collection
+#         - intent: request_material
+#         - intent: request_keyword
+#         - intent: request_genre
+#         - intent: request_exhibition
+#         - intent: request_country
+#         - intent: request_city
+#   - action: action_request_aspect
+#   - action: utter_attribute_or_painting
+
+# - story: 2_choices_choose_both
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: action_next_painting
+#   - action: action_request_description
+#   - action: action_random_2_choice
+#   - intent: request_both
+#   - action: action_request_both
+#   - action: utter_attribute_or_painting
+
+
+
+
+
